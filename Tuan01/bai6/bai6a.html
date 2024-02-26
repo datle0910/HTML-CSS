@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai6a</title>
+    <style>
+        body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            height: 700px;
+            width: 890px;
+            background-color: rgb(117, 186, 222);
+            
+        }
+        .head_title{
+            /* margin: 0px auto; */
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+        }
+        .footer_title{
+            /* margin: 0px auto; */
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            margin: 20px;
+        }
+        .subhead{
+            /* margin: 0px auto; */
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+        }
+        .mainContent{
+            display: flex;
+            /* justify-content: center; */
+            margin-left: 60px;
+        }
+
+        .lb_ip div{
+            margin-bottom: 10px;
+        }
+        .input1{
+            margin-left: 60px;
+        }
+        article{
+            border-bottom: 1px solid black;
+        }
+        .radio-container {
+            display: flex;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="head_title">
+             <h2>Registration Form</h2>
+        </header>
+        <nav class="subhead">
+            <p>Register your Jackson Electronics product here</p>
+        </nav>
+        <article class="mainContent">
+            <div class="lb_ip">
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input class="input1" type="text">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text">
+                </div>
+
+                <div>
+                    <label style="margin-right: 9px;" for="address1">Address#1</label>
+                    <input class="input1" style="width: 250px;" type="text" > 
+                </div>
+                
+                <div>
+                    <label style="margin-right: 9px;" for="address2">Address#2</label>
+                    <input class="input1" style="width: 250px;" type="text"> 
+                </div>
+                <div>
+                    <label style="margin-right: 45px;" for="city">City:</label>
+                    <input class="input1" type="text">
+                    <label for="state">State</label>
+                    <input style="width: 50px;" type="text" name="" id="">
+                    <label for="zipcode">Zip</label>
+                    <input style="width: 75px;" type="text" name="" id="">
+                </div>
+                <div>
+                    <label style="margin-right: 25px;" for="con">Country</label>
+                    <input class="input1" type="text">
+                </div>
+            </div>
+            
+        </article>
+        <article class="mainContent">
+            <div class="lb_ip">
+                <div>
+                    <label style="margin-right: 87px;" for="product">Product</label>
+                    <select style="width: 175px;" name="" id="">
+                        <option value="">ScanMaster</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label style="margin-right: 33px;" for="datepurchase">Date Purchased:</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label style="margin-right: 88px;" for="serial">Serial#.</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label style="margin-right: 70px;" for="usefor">Used for:</label>
+                    <input type="radio" value="home" id="home" name="usefor">
+                    <label for="home">Home</label>
+                    <input style="margin-left: 68px;" type="radio" value="edu" id="edu" name="usefor">
+                    <label for="edu">Educational Institution</label><br>
+                    <input style="margin-left: 140px;" type="radio" value="business" id="business" name="usefor">
+                    <label for="business">Business</label>
+                    <input style="margin-left: 50px;" type="radio" value="other" id="other" name="usefor">
+                    <label for="other">Other</label><br>
+                    <input style="margin-left: 140px;" type="radio" value="gov" id="gov" name="usefor">
+                    <label for="gov">Govemment</label>
+                </div>
+                <div>
+                    <label style="margin-right: 80px;" for="system">System:</label>
+                    <input type="checkbox">
+                    <label style="margin-right: 45px;" for="win">Windows</label>
+                    <input type="checkbox">
+                    <label for="unix">Unix</label><br>
+                    <input style="margin-left: 140px;" type="checkbox">
+                    <label for="mac">Macintosh</label>
+                    <input style="margin-left: 40px;" type="checkbox">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+        </article>
+        <footer class="mainContent">
+            <div>
+                <div>
+                    <label for="comments">Commments?:</label>
+                    <input style="height: 150px;width: 600px;margin-left: 50px;" type="text">
+                </div>
+                <div class="footer_title">
+                    <button>Click to register</button>
+                    <button style="margin-left: 10px;">Click to cancel</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

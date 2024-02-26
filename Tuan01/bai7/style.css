@@ -1,0 +1,13 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    
+}
+.wrapper{
+    height: 780px;
+    width: 780px;
+    border: 1px solid black;
+}
+h3{
+    color: rgb(198, 59, 70);
+}

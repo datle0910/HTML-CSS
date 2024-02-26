@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    height: 1250px;
+    width: 1500px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+header{
+    height: 200px;
+    width: 1500px;
+    position: relative;
+}
+#background-logo{
+    position: absolute;
+    height: 200px;
+    width: 1500px;
+}
+#logo{
+    position: absolute;
+    padding-left: 30px;
+}
+.title{
+    height: 100px;
+    width: 400px;
+    margin-top: 70px;
+    margin-left: 250px;
+    color: white;
+    position: absolute;
+    box-sizing: border-box;
+}
+.title h3{
+    font-size: 40px;
+}
+.title p{
+    font-size: 25px;
+}
+.nav-bar{
+    height: 80px;
+    width: 1500px;
+    background-color: gray;
+    display: flex;
+}
+.main-menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.main-menu-li{
+    list-style: none;
+}
+.main-menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    display: block;
+    padding: 20px;
+}
+.content{
+    height: 700px;
+    width: 1500px;
+    margin: 30px;
+    display: flex;
+    box-sizing: border-box;
+}
+.content-left{
+    height: 850px;
+    width: 1000px;
+}
+.content-left-rongcao{
+    height: 365px;
+    width: 1000px;
+    display: flex;
+}
+.img-content-left{
+    height: 350px;
+}
+.content-left-top-main{
+   height: 250px;
+   width: 500px;
+   margin: 10px;
+}
+.content-left-top-main .ten-mon-an{
+    font-size: 35px;
+}
+.content-left-top-main .gach-do{
+    font-size: 25px;
+    color: red;
+}
+.content-left-top-main .mieu-ta-mon-an{
+    font-size: 25px;
+    margin-top: 20px;
+}
+.ten-mon-an-2{
+    font-size: 30px;
+}
+.content-right{
+    height: 800px;
+    width: 450px;
+}
+.main-right-top{
+    height: 500px;
+    width: 450px;
+}
+.main-right-bot{
+    height: 300px;
+    width: 450px;
+}
+.title-right-main{
+    font-size: 40px;
+    color: red;
+   padding-top: 20px;
+}
+.menu-right-top li{
+    list-style: none;
+    color: red;
+    font-size: 30px;
+    height: 50px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.menu-right-bot li{
+    list-style: none;
+    font-size: 30px;
+    height: 50px;
+    padding-left: 20px;
+}
+.footer{
+    height: 100px;
+    width: 1500px;
+    background-color: gray;
+    margin-top: 100px;
+}
+.footer p{
+    font-size: 30px;
+    line-height: 100px;
+    color: white;
+}
