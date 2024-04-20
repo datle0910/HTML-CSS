@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Register Form</h1>
+        <form id="registerForm" action="thongtin.html" method="POST">
+            <table class="table">
+            <tbody>
+                <tr>
+                    <td><label for="hovanten">Ho Va Ten(*)</label></td>
+                    <td class="rangbuocdk">
+                        <input type="text" id="hovaten" required>
+                        <span id="rangbuocht" style="color: red;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="tendangnhap">Ten Dang Nhap(*)</label></td>
+                    <td class="rangbuocdk">
+                        <input type="text" id="tendangnhap" required>
+                        <span id="rangbuocDN" style="color: red;"></span>
+                    </td>   
+                </tr>
+                <tr>
+                    <td><label for="matkhau">Mat Khau(*)</label></td>
+                    <td class="rangbuocdk">
+                        <input type="password" id="matkhau" required>
+                        <span id="rangbuocMK" style="color: red;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="xnmatkhau">Xac Nhan Mat Khau(*)</label></td>
+                    <td class="rangbuocdk">
+                        <input type="xnpassword" id="xnmatkhau" required>
+                        <span id="rangbuocxnmatkhau" style="color: red;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ngaysinh">Ngay Sinh</label></td>
+                    <td><input type="date" id="ngaysinh"></td>
+                </tr>
+                <tr>
+                    <td><label for="dienthoai">Dien Thoai</label></td>
+                    <td class="rangbuocdk">
+                        <input type="text" id="dienthoai">
+                        <span id="rangbuocDT" style="color: red;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="diachi">Dia Chi</label></td>
+                    <td><input type="text" id="diachi"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email khac</label></td>
+                    <td class="rangbuocdk">
+                        <input type="email" id="email">
+                        <span id="rangbuocEM" style="color: red;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="sothich">So Thich</label></td>
+                    <td><select name="" id="sothich">
+                        <option value="canhac">Ca Nhac</option>
+                        <option value="danhdan">danh dan</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="dangky" type="submit">Dang ky</button>
+                        <button id="huy" type="button">Huy</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <form action="">
+    ID <input type="number" name="IDstu" id="IDstu">
+    Name <input type="text" name="nameStudent" id="nameStudent">
+    <input type="button" value="addData" onclick="addStudent();">
+    <table id="tb" class="tb" border="1">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+   </form>
+   <script>
+    function addStudent(){
+        var idStu = document.getElementById('IDstu').value;
+        var nameStu = document.getElementById('nameStudent').value;
+
+        var tr = document.createElement('tr');
+
+        var td1 =tr.appendChild(document.createElement('td'));
+        var td2 = tr.appendChild(document.createElement('td'));
+
+        td1.innerHTML = idStu;
+        td2.innerHTML = nameStu;
+
+        document.getElementById("tb").appendChild(tr);
+    }
+   </script>
+</body>
+</html>

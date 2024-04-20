@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.wrapper{
+    height: 980px;
+    width: 960px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(45, 152, 199);
+}
+.navbar{
+    height: 80px;
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    border-bottom: 5px dotted white;
+    box-sizing: border-box;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.menu li a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.main-content{
+    height: 550px;
+    width: 960px;
+    display: flex;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.registration{
+    height: 550px;
+    width: 430px;
+    color: aliceblue;
+    margin-left: 10px;
+}
+.registration h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+    box-sizing: border-boxs;
+}
+.registration p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.infor{
+    margin-left: 60px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+.infor label {
+    display: inline-block;
+    width: 150px; /* Đảm bảo tất cả các label có cùng chiều rộng */
+    margin-bottom: 10px; /* Tạo khoảng cách dưới cho label */
+}
+
+.infor input,
+.infor select {
+    margin-bottom: 10px; /* Tạo khoảng cách dưới cho input/select */
+}
+#spe-ques{
+    height: 100px;
+    width: 165px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px; 
+}
+.button{
+    height: 40px;
+    width: 60px;
+}
+.img{
+    height: 450px;
+    width: 50%;
+    color: blue;
+}
+.img img{
+    width: 100%;
+    height: auto;
+}
+.img h3{
+    font-size: 25px;
+    text-shadow: 5px 5px 4px blue;
+}

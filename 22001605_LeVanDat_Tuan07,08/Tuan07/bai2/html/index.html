@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <img id="img-main" src="../img/speed.png" alt="">
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Bang tin</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">vang</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mua vào</td>
+                                <td>Ban ra</td>
+                            </tr>
+                            <tr>
+                                <td id="gtriVangMuaVao"></td>
+                                <td id="gtriVangBanRa"></td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th colspan="2">USD</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mua vào</td>
+                                <td>Ban ra</td>
+                            </tr>
+                            <tr>
+                                <td id="gtriUsdMuaVao"></td>
+                                <td id="gtriUsdBanRa"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="col">
+                <form action="">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Cập nhật giá cả thị trường</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mua vào</td>
+                                <td><input type="text" name="jtf-CNmuavao" id="jtf-CNmuavao"></td>
+                            </tr>
+                            <tr>
+                                <td>Ban ra</td>
+                                <td><input type="text" name="jtf-CNbanra" id="jtf-CNbanra"></td>
+                            </tr>
+                            <tr>
+                                <td>Loai xe</td>
+                                <td>
+                                    <select id="carSelect">
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="KIA">KIA</option>
+                                        <option value="Ford">Ford</option>
+                                        <option value="Civic">Civic</option>
+                                        <option value="Ferrari">Ferrari</option>
+                                        <option value="Mercedes">Mercedes</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="radio" id="vang" value="vang" name="giatri">
+                                    <label for="vang">vang</label>
+                                    <input type="radio" id="usd" value="usd" name="giatri">
+                                    <label for="usd">Usd</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="button" value="Update" id="update">Update
+                                <input type="button" value="State" id="state">State
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="col">
+                <form action="">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Bang gia bao</th>
+                                
+                            </tr>
+                            <tr>
+                                <th>-Voi kieu giang the thao <br>
+                                    -Noi bat, it ton nhien lieu <br>
+                                    -Kieu giang the thao
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img id="carImage" src="" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>Gia ca</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        $(document).ready(function() {
+    $("#update").click(function(){
+        var gtrimua = $("#jtf-CNmuavao").val();
+        var gtriban = $("#jtf-CNbanra").val();
+
+        var valueRad = $("input[name='giatri']:checked").val();
+        if(valueRad == "vang"){
+            $("#gtriVangMuaVao").html(gtrimua);
+            $("#gtriVangBanRa").html(gtriban);
+        }
+        else if(valueRad == "usd"){
+            $("#gtriUsdMuaVao").html(gtrimua);
+            $("#gtriUsdBanRa").html(gtriban);
+        }
+    });
+
+    $("#carSelect").change(function (e) { 
+        e.preventDefault();
+        
+        var carSelected = $(this).val();
+
+        var imgCarSrc = "";
+        switch(carSelected){
+            case "Toyota":
+                imgCarSrc = "../img/car1.jpg"; // Sửa đường dẫn của hình ảnh thành .jpg
+                break;
+            case "KIA":
+                imgCarSrc = "../img/car2.jpg"; // Sửa đường dẫn của hình ảnh thành .jpg
+                break;
+            case "Ford":
+                imgCarSrc = "../img/car3.jpg"; // Sửa đường dẫn của hình ảnh thành .jpg
+                break;
+            case "Civic":
+                imgCarSrc = "../img/car4.jpg"; // Sửa đường dẫn của hình ảnh thành .jpg
+                break;
+            case "Ferrari":
+                imgCarSrc = "../img/car5.jpg"; // Sửa đường dẫn của hình ảnh thành .jpg
+                break;
+            case "Me":
+                imgCarSrc = "../img/car4.jpg"; // Sửa đường dẫn của hình ảnh thành .jpg
+                break;
+            default:
+                imgCarSrc = "";
+                break;
+        }
+        $("#carImage").attr("src", imgCarSrc);
+    });
+});
+
+    </script>
+</body>
+</html>

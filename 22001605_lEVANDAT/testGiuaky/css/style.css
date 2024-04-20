@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 820px;
+    width: 960px;
+    border: 1px solid black;
+}
+.navbar{
+    height: 100px;
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar img{
+    padding-left: 30px;
+}
+.item-menu{
+    height: 100px;
+    width: 400px;
+    padding-right: 40px;
+}
+.menu{
+    display: flex;
+    padding-right: 10px;
+}
+.menu li {
+    list-style: none;
+    padding: 20px;
+    font-size: 15px;
+    padding-right: 30px;
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+}
+.section{
+    height: 600px;
+    width: 960px;
+}
+.section-up{
+    height: 300px;
+    width: 960px;
+    display: flex;
+}
+
+.sec-up-left{
+    height: 300px;
+    width: 480px;
+    padding: 50px;
+}
+.sec-up-left h3{
+    font-size: 45px;
+    color: rgb(11, 11, 122);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.sec-up-left .maa{
+    height: 40px;
+    width: 150px;
+    line-height: 40px;
+    background-color: aquamarine;
+    border-radius: 30px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.sec-up-left input{
+    height: 30px;
+    width: 300px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.sec-up-right{
+    height: 300;
+    width: 480px;
+}
+.anhcho{
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    padding-top: 20px;
+}
+.sec-up-right img{
+    height: 300px;
+}
+.section-down{
+    height: 300px;
+    width: 960px;
+    display: flex;
+}
+.sec-down-left{
+    height: 300;
+    width: 480px;
+    padding-top: 50px;
+}
+.down-item{
+    height: 100%;
+    width: 460px;
+    display: flex;
+}
+.adress{
+    height: 100%;
+    width: 230px;
+}
+.adress p{
+    height: 60%;
+    width: 170px;
+    font-size: 17px;
+    background-color: rgb(26, 26, 119);
+    color: white;
+    padding: 20px;
+    margin-left: 50px;
+    box-sizing: border-box;
+}
+.meo{
+    height: 100%;
+    width: 230px;
+}
+.meo img{
+    height: 150px;
+}
+.sec-down-right{
+    height: 300;
+    width: 480px;
+}
+.sec-down-right h3{
+    color: rgb(27, 27, 157);
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.para1{
+    padding-bottom: 20px;
+}
+.footer{
+    height: 160px;
+    width: 960px;
+}
+.footer-up{
+    height: 80px;
+    width: 960px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.icon-item{
+    display: flex;
+}
+.icon-item li {
+    list-style: none;
+}
+.icon-item li img{
+    height: 50px;
+    width: 50px;
+}
+.footer-down{
+    padding-left: 350px;
+    font-size: 25px;
+    box-sizing: border-box;
+}

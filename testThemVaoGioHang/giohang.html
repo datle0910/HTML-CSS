@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<body>
+    <h1>Cart</h1>
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th> <!-- Thêm cột mới cho nút xóa -->
+            </tr>
+        </thead>
+        <tbody id="cartBody">
+            <!-- Các sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        window.onload = function() {
+            // Lấy dữ liệu giỏ hàng từ Local Storage
+            var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Hiển thị các sản phẩm trong giỏ hàng
+            var tableBody = document.getElementById("cartBody");
+            cart.forEach(function(item, index) { // Thêm index để xác định vị trí của sản phẩm trong giỏ hàng
+                var row = document.createElement("tr");
+                var productNameCell = document.createElement("td");
+                var productPriceCell = document.createElement("td");
+                var quantityCell = document.createElement("td");
+                var actionCell = document.createElement("td"); // Tạo cột mới cho nút xóa
+
+                var quantityInput = document.createElement("input");
+                quantityInput.type = "number";
+                quantityInput.min = "1";
+                quantityInput.value = "1"; // Đặt giá trị mặc định cho số lượng
+                quantityCell.appendChild(quantityInput);
+                
+                productNameCell.textContent = item.productName;
+                productPriceCell.textContent = item.productPrice;
+
+                var deleteButton = document.createElement("button");
+                deleteButton.textContent = "Xóa";
+                deleteButton.onclick = function() {
+                    cart.splice(index, 1); // Xóa sản phẩm khỏi giỏ hàng
+                    localStorage.setItem("cart", JSON.stringify(cart)); // Cập nhật giỏ hàng trong Local Storage
+                    row.remove(); // Xóa hàng trong bảng
+                };
+
+                actionCell.appendChild(deleteButton); // Thêm nút xóa vào cột hành động
+
+                row.appendChild(productNameCell);
+                row.appendChild(productPriceCell);
+                row.appendChild(quantityCell);
+                row.appendChild(actionCell); // Thêm cột hành động vào hàng
+
+                tableBody.appendChild(row);
+            });
+        };
+    </script>
+</body>
+</html>

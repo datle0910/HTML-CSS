@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web gioi thieu, ban may in, may scan</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        body{
+            font-size: 14px;
+            background-color: #F5F8FD;
+        }
+        .header-row{
+            background-color: #4a90e2;
+            height: 20px;
+            padding: 10px;
+        }
+        .navbar{
+            background-color: #FFFFFF;
+            height: 100px;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 340px;
+            box-sizing: border-box;
+        }
+        .navbar ul li a{
+            color: black;
+            font-size: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .nav-item{
+            padding-left: 30px;
+            box-sizing: border-box;
+        }
+        .container {
+            box-sizing: border-box  ;
+            
+        }
+        .container img{
+            width: 100%;
+        }
+        .row h3{
+            font-size: 24px;
+            padding-top: 10px;
+            box-sizing: border-box;
+        }
+        .col{
+            background-color: #FFFFFF;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        .title-row {
+            display: flex;
+            justify-content: space-between;
+            line-height: 20px;
+        }
+        .title-row p{
+            line-height: 50px;
+        }
+        .nav-item a img{
+            width: 30px;
+        }
+        .nav-item button img{
+            width: 30px;
+            padding-top: 13px;
+            box-sizing: border-box;
+        }
+        .cart-container table{
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        .cart-container table thead{
+            font-weight: 700;
+        }
+        .cart-container table thead td{
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+        }
+        .breadcrumb{
+            background-color: #F5F8FD;
+        }
+        .product-info{
+            font-size: 17px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .thuonghieu{
+            font-size: 20px;
+        }
+
+        #rating{
+            width: 100px;
+        }
+        #danhgia{
+            padding-top: 39px;
+            box-sizing: border-box;
+        }
+        .btn-themvaogiohang{
+            height: 50px;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+        .mainFooter{
+            color: #252a2b;
+            font-size: 14px;
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+            padding: 50px;
+            box-sizing: border-box;
+            display: block;
+            border-top: 1px solid #e7e7e7;
+            background: #ffffff;
+            line-height: 1.6;
+            margin-top: 30px;
+
+        }
+        .box-icon img{
+            width: 60px;
+            box-sizing: border-box;
+        }
+        .footerInfo-hline{
+            display: flex;
+        }
+        .box-content{
+            padding: 20px;
+            box-sizing: border-box ;
+        }
+        #imgsp{
+            margin: 10px;
+        }
+        #giatien{
+            font-size: 20px;
+            margin: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header-row">
+
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html"><img src="../img/Screenshot 2024-04-11 160218.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="thongtin.html">Thông Tin <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Sản Phẩm
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="MayIn.html">Máy In</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="MayScan.html">Máy Scan</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Khách Hàng
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="BaoQuan.html">Hướng dẫn bảo quản</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="BaoMat.html">Chính sách bảo mật</a>
+                </div>
+              </li>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <li class="nav-item">
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><img id="user" src="../img/user.png" alt=""></button>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html"><img src="../img/shopping-cart.png" alt=""></a>
+              </li>
+          </ul>
+          
+        </div>
+      </nav>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Đăng Nhập</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Tài Khoản:</label>
+                <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+                <label for="message-text" class="col-form-label">Mật Khẩu:</label>
+                <input type="password" class="form-control" id="message-text">
+                <span><a href="">Quên Mật Khẩu</a></span>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Đăng Nhập</button>
+            <a href="dangky.html"><button type="button" class="btn btn-primary">Đăng Ký</button></a>
+            
+        </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Sản Phẩm</li>
+            </ol>
+          </nav>
+        <div class="row">
+            <div class="col-6">
+                <img id="imgsp" src="../img/5000S5.jpg" alt="">
+            </div>
+            <div class="col" id="mainSP">
+                <div class="row">
+                    <h1 id="productName">Máy scan HP Enterprise Flow 5000 S5 (6FW09A)</h1>
+                    <p class="thuonghieu">Thương hiệu : HP</p>
+                </div>
+                <br>
+                <div class="row">
+                    <h5>Thông tin sản phẩm :</h5>
+                    <p class="product-info">
+                        
+                        Máy scan HP Enterprise Flow 5000 S5 (6FW09A) là một sản phẩm cao cấp của HP (Hewlett-Packard), một trong những nhà sản xuất hàng đầu trong lĩnh vực máy in, máy scan và các thiết bị văn phòng khác. Máy scan này được thiết kế để đáp ứng nhu cầu quét tài liệu chuyên nghiệp với hiệu suất và độ tin cậy cao.
+                    </p>
+                </div>
+                <div class="row">
+                    <span id="giatien">Giá Tiền : 24.999.000đ</span>
+                </div>
+                <div class="row">
+                    <img id="rating" src="../img/rating.png" alt="">
+                    <span id="danhgia">(30 lượt đánh giá)</span>
+                    <button type="button" class="btn btn-primary btn-themvaogiohang">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="mainFooter">
+        <div class="footer-container">
+            <div class="footer-call-center">
+                <div class="container">
+                    <div class="flexbox-callcenter">
+                        <div class="infocc expand-title">
+                            <div class="infocc-box">
+                                <span class="txtcc txt-icon"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-expand-collapsed">
+                <div class="footer-maininfo">
+                    <div class="container">
+                        <div class="row">
+                            
+                            <div class="col-md-6 col-sm-12 col-xs-12 widget-footer">
+                                <h4 class="title-footer">SÓNG BIỂN</h4>
+                                <div class="content-footer block-collapse row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <p>SOBIE viết tắt của SÓNG BIỂN, được thành lập từ năm 2017.</p>    
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="address-footer">
+                                            <ul>
+                                                <li class="contact-1">HỘ KINH DOANH SÓNG BIỂN<br><b>Địa chỉ:</b> 12 Nguyễn Văn Bảo , Gò Vấp , TP HCM</li><li class="contact-2">Số: 12345678</li><li class="contact-3">MST: 00000000</li><li class="contact-4"> Ngày cấp: 24/10/2018</li>										</ul>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="col-md-3 col-sm-12 col-xs-12 widget-footer">
+                                <h4 class="title-footer">Hỗ trợ khách hàng</h4>
+                                <div class="content-footer block-collapse">				
+                                    <ul class="footerNav-link">
+                                        
+                                        <li class="item">CHÍNH SÁCH BẢO MẬT THÔNG TIN</li>
+                                        <li class="item">CHÍNH SÁCH BẢO MẬT THÔNG TIN THANH TOÁN</li>
+                                        <li class="item">CHÍNH SÁCH THANH TOÁN</li>
+                                        <li class="item">ĐIỀU KHOẢN GIAO DỊCH CHUNG</li>
+                                        <li class="item">CHÍNH SÁCH VẬN CHUYỂN, GIAO HÀNG</li>
+                                        <li class="item">CHÍNH SÁCH KIỂM HÀNG</li>
+                                            
+                                    </ul>			
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-12 col-xs-12 widget-footer">	
+    
+                                <h4 class="title-footer">Liên hệ</h4>
+                                <div class="content-footer block-collapse">
+                                    <div class="footerInfo-hline">
+                                        <div class="box-icon">
+                                            <img class="phone-call" src="../img/telephone.png" alt="">
+                                        </div>
+                                        <div class="box-content">
+                                            <span>0937.246.898</span>
+                                            <u>sobie@gmail.com</u>
+                                        </div>
+                                    </div>
+                                    
+    
+                                    <h4 class="fter-title">Kết nối với SOBIE</h4>
+    
+                                    <ul class="footerNav-social">											
+                                    
+                                    </ul>
+                                </div>
+    
+    
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>	
+    </footer>
+    <script>
+        $(".btn-themvaogiohang").click(function(){
+            var quantity = 1;
+            var productName = $("#productName").text();
+            var price = $("#giatien").text();
+    
+            var cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({productName:productName, price: price, quantity: quantity});
+            localStorage.setItem("cart", JSON.stringify(cart));
+    
+            // Chuyển hướng sang trang cart.html
+            window.location.href = "cart.html";
+        });
+    </script>
+    
+    
+</body>
+</html>

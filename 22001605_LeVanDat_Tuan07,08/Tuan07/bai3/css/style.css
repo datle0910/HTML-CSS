@@ -1,0 +1,15 @@
+.container{
+    background-color: rgb(224, 250, 198);
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+td {
+
+    border: 2px solid black; 
+}
+.rangbuocdk{
+    display: flex;
+    align-items: center;
+}

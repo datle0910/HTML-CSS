@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form action="">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Chuyen Nganh</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-data">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script>
+        $(document).ready(function(){
+            var email = localStorage.getItem("email");
+            var pass = localStorage.getItem("pass");
+            var cn = localStorage.getItem("cn");
+
+            var newRow = $("<tr></tr>");
+            newRow.append("<td>" + email + "</td>");
+            newRow.append("<td>" + pass + "</td>");
+            newRow.append("<td>" + cn + "</td>");
+
+            $("#tbody-data").append(newRow);
+        });
+    </script>
+</body>
+</html>

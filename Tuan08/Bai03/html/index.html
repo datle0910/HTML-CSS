@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="div-hoten">
+                <label for="hoten">Ho Ten</label>
+                <input type="text" id="jtf-hoten">
+            </div>
+            <div class="div-lop">
+                <label for="lop">Lop</label>
+                <select name="lop" id="select-lop">
+                    <option value="ktpm18a">DHKTPM18A</option>
+                    <option value="ktpm18b">DHKTPM18B</option>
+                    <option value="ktpm18c">DHKTPM18C</option>
+                </select>
+            </div>
+            <div class="div-monhoc">
+                <label for="monhoc">Mon hoc</label>
+                <select name="monhoc" id="select-monhoc">
+                    <option value="hdt">Huong doi tuong</option>
+                    <option value="web">HTCNWEB</option>
+                </select>
+            </div>
+            <div class="div-loai">
+                <label for="loai">Loai</label>
+                <input type="radio" id="lt" value="lt" name="loai">
+                <label for="lt">Ly Thuyet</label>
+                <input type="radio" id="th" value="th" name="loai">
+                <label for="th">Thuc Hanh</label>
+            </div>
+            <div class="div-dangky">
+                <input type="submit" id="dangky">
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Ho Ten</th>
+                        <th>Lop</th>
+                        <th>Mon hoc dang ky</th>
+                        <th>loai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function() {
+    function themvaotable(){
+        var hoten = $("#jtf-hoten").val();
+        var lop = $("#select-lop").val();
+        var monhoc = $("#select-monhoc").val();
+        var loai = $("input[name='loai']:checked").val();
+
+        var newRow = "<tr>" +
+                        "<td>" + hoten + "</td>" +
+                        "<td>" + lop + "</td>" +
+                        "<td>" + monhoc + "</td>" +
+                        "<td>" + (loai === 'lt' ? 'Lý Thuyết' : 'Thực Hành') + "</td>" +
+                    "</tr>";
+
+        $(".table tbody").append(newRow);
+    }
+
+
+    $("#dangky").click(function(event) {
+        event.preventDefault(); 
+
+        themvaotable();
+    });
+});
+
+    </script>
+</body>
+</html>

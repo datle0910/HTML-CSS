@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin</title>
+</head>
+<body>
+    <h1>Thông Tin</h1>
+    <div id="info"></div>
+
+    <script>
+        // Lấy thông tin từ local storage
+        var fullName = localStorage.getItem("fullname");
+        var tendangnhap = localStorage.getItem("tendangnhap");
+        var matkhau = localStorage.getItem("matkhau");
+        var ngaysinh = localStorage.getItem("ngaysinh");
+        var dienthoai = localStorage.getItem("dienthoai");
+        var diachi = localStorage.getItem("diachi");
+        var email = localStorage.getItem("email");
+        var sothich = localStorage.getItem("sothich");
+
+        // Hiển thị thông tin
+        var infoHTML = "<p>Họ và tên: " + fullName + "</p>";
+        // Thêm thông tin khác vào chuỗi infoHTML
+        infoHTML += "<p>Ten dang nhap: " + tendangnhap + "</p>";
+        infoHTML += "<p>mat khau: " + matkhau + "</p>";
+        infoHTML += "<p>Ngay sinh: " + ngaysinh + "</p>";
+        infoHTML += "<p>Dien thoai: " + dienthoai + "</p>";
+        infoHTML += "<p>dia chi: " + diachi + "</p>";
+        infoHTML += "<p>email: " + email + "</p>";
+        infoHTML += "<p>so thich: " + sothich + "</p>";
+        // Gán chuỗi infoHTML vào innerHTML của phần tử có id là "info"
+        document.getElementById("info").innerHTML = infoHTML;
+
+    </script>
+</body>
+</html>

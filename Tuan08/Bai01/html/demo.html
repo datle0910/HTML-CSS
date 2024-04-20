@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="dangky">
+            <form action="">
+                <h1>Dang Ky Tai Khoan</h1>
+                <div class="frmdk">
+                    <label for="tendangnhap">Ten Dang Nhap</label>
+                    <div class="rangbuoc" id="rangbuocDN">
+                        <input type="text" id="jtf-DN" >
+                        <span id="tendn" class="required-message">*</span>
+                    </div>
+                    
+                </div>
+                <div class="frmdk">
+                    <label for="matkhau">Mat khau</label>
+                    <div class="rangbuoc" id="rangbuocMK">
+                        <input type="text" id="jtf-MK">
+                        <span id="mk" class="required-message">*</span>
+                    </div>
+                    
+
+                </div>
+               <div class="frmdk">
+                    <label for="nhaplaimk">Nhap Lai Mat Khau</label>
+                    <div class="rangbuoc" id="rangbuoccfmk">
+                        <input type="text" id="jtf-NLMK">
+                        <span id="cfmk" class="required-message">*</span>
+                    </div>
+                    
+
+               </div>
+                <h1>Thong Tin Ca Nhan</h1>
+                <div class="frmdk">
+                    <label for="hoten">Ho Ten</label>
+                    
+                    <div class="rangbuoc" id="rangbuocHT">
+                        <input type="text" id="jtf-hovaten">
+                        <span class="required-message" id="hvt">*bat buoc</span>
+                    </div>
+                    
+                </div>
+                <div class="frmdk">
+                    <label for="ngaysinh">Ngay Sinh</label>
+                    <div class="rangbuoc" id="rangbuocNS">
+                        <input type="date" id="jtf-NgaySinh">
+                        <span id="nss" class="required-message">*</span>
+                    </div>
+                </div>
+                <div class="frmdk">
+                    <label for="gioitinh">Gioi Tinh</label>
+                    <div class="rangbuoc">
+                        <input type="radio" id="gt-nam" value="nam" name="gioitinh">
+                        <label for="gioitinhnam">Nam</label>
+                        <input type="radio" id="gt-nu" value="nu" name="gioitinh">
+                        <label for="gioitinhNu">Nu</label>
+                    </div>
+                    
+                </div>
+                <div class="frmdk"> 
+                    <label for="diachi">Dia chi</label>
+                    <div class="rangbuoc">
+                        <input type="text" id="jtf-diachi">
+                        <span class="required-message" id="rangbuocDC"></span>
+                    </div>
+                    
+                </div>
+                <div class="frmdk">
+                    <label for="dienthoai">So Dien Thoai</label>
+                    <div class="rangbuoc" id="rangbuocDT">
+                        <input type="text" id="jtf-sdt">
+                        <span class="required-message" id="sdt">phai la so</span>
+                    </div>
+                    
+
+                </div>
+                <div class="frmdk">
+                    <label for="email">Email</label>
+                    <div class="rangbuoc" id="rangbuocEM">
+                        <input type="email" id="jtf-email">
+                        <span class="required-message" id="email">nhap dung email</span>
+                    </div>
+                    
+                </div>
+                <div class="rangbuoc">
+                    <input type="submit" value="dangky" id="dangky">
+                    <input type="reset" value="huy" id="huy">
+                </div>
+            </form>
+        </div>
+        <div class="thongtin">
+
+        </div>
+    </div>
+    <script src="../js/scrip.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Nguyen Tan Dat" content="22675131 bai thuc hanh tuan 07" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Document</title>
+
+    <script>
+        $(document).ready(function() {
+            $("#txtmua").focus();
+            $("#btnupdate").attr("disabled", true);
+            $("#btnstate").attr("disabled", true);
+
+            function ktra(giatri, loi) {
+                let reg = /^[0-9]+$/;
+
+                if (!reg.test(giatri)) // sai tb loi
+                {
+                    $(loi).html("Gia tri pai la");
+                    return false;
+
+                } else {
+                    $(loi).html("*");
+                    return true;
+                }
+
+
+
+            }
+
+            $("#txtmua").blur(function(e) {
+                let giatrimua = $("#txtmua").val();
+                ktra(giatrimua, ".ermua");
+
+            });
+            $("#txtban").blur(function(e) {
+                let giatriban = $("#txtban").val();
+                ktra(giatriban, ".erban");
+
+                if (ktra(giatriban, ".erban"))
+                    $("#btnupdate").attr("disabled", false);
+                else
+                    $("#btnupdate").attr("disabled", true);
+
+
+            });
+
+            $("#cars").change(function(e) {
+                let xegia = $(this).val();
+                let vt = xegia.indexOf(";")
+
+                let pathxe = xegia.substring(0, vt);
+                let gia = xegia.substring(vt + 1, xegia.length);
+
+                $(".customImg").attr("src", pathxe);
+                $(".giaTien").html(gia);
+
+                //console.log(vt)
+            });
+
+            $("#btnupdate").click(function(e) {
+                let giatrimua = $("#txtmua").val();
+                let giatriban = $("#txtban").val();
+                //radio? vang usd 
+                let valrad = $("input[name='haha']:checked").val();
+                //console.log(valrad);
+                if (valrad == "1") //vang
+                {
+                    $(".vmua").html(giatrimua);
+                    $(".vban").html(giatriban);
+                } else {
+                    $(".usdmua").html(giatrimua);
+                    $(".usdban").html(giatriban);
+                }
+
+
+
+            });
+
+        });
+    </script>
+
+</head>
+<style>
+    .custom-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+    }
+    
+    .company-name {
+        width: 493px;
+        position: absolute;
+        bottom: 26px;
+        left: 76%;
+        transform: translateX(-66%);
+        color: #202020;
+        font-size: 33px;
+        font-weight: bold;
+        text-shadow: 0 0 #676767;
+        letter-spacing: 10px;
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid rgb(113, 113, 113);
+        border-collapse: collapse;
+    }
+    
+    .custom-body {
+        margin-top: 20px;
+    }
+    
+    .customImg {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+</style>
+
+
+<body>
+    <form action="">
+        <input type="text" id="txt">
+    </form>
+    <div class="container">
+        <div class="row custom-header">
+            <img src="../img/CAR-RENTALS.jpg" alt="" />
+            <p class="company-name">T-SPEED COMPANY</p>
+        </div>
+        <div class="row custom-body">
+            <div class="col-4">
+                <table style="width: 100%">
+                    <tr>
+                        <th colspan="2">Bảng tin thị trường</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Vàng</th>
+                    </tr>
+                    <tr>
+                        <td>Mua vào</td>
+                        <td>Bán ra</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px" class="vmua"> AAA</td>
+                        <td class="vban">BBB</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">USD</th>
+                    </tr>
+                    <tr>
+                        <td>Mua vào</td>
+                        <td>Bán ra</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px" class="usdmua">CCCC</td>
+                        <td class="usdban">DDD</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-4">
+                <form action="">
+                    <table style="width: 100%">
+                        <tr>
+                            <th colspan="2">Cập nhật giá cả thị trường</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Vàng</th>
+                        </tr>
+                        <tr>
+                            <td>Mua vào</td>
+                            <td><input id="txtmua" type="text" /><span class="ermua">*</span> </td>
+                        </tr>
+                        <tr>
+                            <td>Bán ra</td>
+                            <td><input type="text" id="txtban" /><span class="erban">*</span></td>
+                        </tr>
+                        <tr>
+                            <td>Loai xe</td>
+                            <td>
+                                <select name="cars" id="cars">
+                                    <option value="../img/1.jpg; 35000">toyota</option>
+                                    <option value="../img/2.jpg;15000">kia</option>
+                                    <option value="../img/3.jpg;40000">ford</option>
+                                    <option value="../img/1.jpg;32000">civic</option>
+                                    <option value="../img/2.jpg;50000">Ferrari</option>
+                                    <option value="../img/3.jpg;45000">Mercedes</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input name="haha" value="1" type="radio" />
+                                <label for="Vang">Vàng</label>
+                                <input name="haha" value="0" type="radio" />
+                                <label for="USD">USD</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" value="Update" id="btnupdate">Update
+                                <input type="button" value="State" id="btnstate">State
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col-4">
+                <table style="width: 100%">
+                    <tr>
+                        <th colspan="2">Bảng báo giá</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p>- với kiểu dáng thể thao sang trọng</p>
+                            <p>- nổi bật,ít tốn nhiên liệu</p>
+                            <p>- kiểu dáng thể thao</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img class="customImg" src="../img/0x0.jpg" alt="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p class="giaTien">350000 USD</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        var inputNumber = document.getElementById("inputNumber");
+        if (inputNumber) {
+            inputNumber.focus();
+        }
+    };
+</script>
+
+</html>

@@ -1,0 +1,221 @@
+
+        *{
+            margin: 0;      
+        }
+
+        #container{
+            width: 960px;
+            height: 898px;
+            margin: auto;
+            font-family: 'Times New Roman', Times, serif;
+            border: 2px solid black;
+        }
+        #tieude{
+            height: 90px;
+            background-image: url(../img/nen_header.jpg);
+            padding: 5px;
+        }
+
+        a{
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            color: black;
+        }
+
+        #search{
+            float: right;
+        }
+
+        
+        #nav{
+            display: flex;
+            background-color: #eac54d;
+    
+        }
+
+        #nav > div{
+            margin: auto;
+        }
+
+
+        #nav > div:hover{
+            background-color: red;
+            color: black;
+        }
+
+        a:hover{
+            color: aqua;
+        }
+
+        .thongTin{padding: 10px;} 
+
+        #onchange{
+            color: red;
+        }
+
+        .onchange_click{
+            color: white;
+        }
+
+        #tin_chinh{
+            display: flex;
+        }
+
+
+
+        #Section{
+            width: 70%;
+        }
+
+        #Section > div{
+            height: 110px;
+            margin: 10px;
+        }
+
+        button{
+            background-color: red;
+            color: white;
+        }
+
+        #Aside{
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+        }
+
+        #Aside > div{
+            border-left: gray 1px solid;
+            border-right: 1px gray solid;
+            flex: 1;
+        }
+
+        #Aside > div > img{
+        }
+
+      /*  #Aside > div > div{
+            border-bottom: 2px solid black;
+        }*/
+
+        #border_item_Chirdlen_Ykien{
+            width: 90%;
+            margin: auto;
+            
+        }
+
+        .border_item_Chirdlen_Ykien2{
+            border-bottom: 1px gray solid;
+            
+        }
+
+        .h_border{
+            margin-bottom: 15px;
+            border: 1px solid grey;
+            background: linear-gradient(to bottom , #fff, #fdfddf);
+        }
+
+
+        #content1{
+            /* background-image: linear-gradient(to bottom top, #c63030, #22216c); */
+            /* background-image: linear-gradient(to right, #c63030, #22216c); */
+            background-image: linear-gradient(to top, #22216c, white,#22216c);
+            border-bottom: 15px orange solid; 
+            border-radius: 15px;
+            border-radius: 10px; border: 1px grey solid;
+        }
+
+        #anh_tuche{
+            background-color: yellow;
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            text-indent: 10px;
+        }
+
+        h4{
+            color: red;
+        }
+
+        #Aside_ykien{
+            border-top:#eac54d solid 8px;
+            border-left: 1px gray solid;
+            border-right: 1px gray solid ;
+        }
+
+
+        .check{
+            color: red;
+        }
+
+        h5{
+            margin: 5px;
+        }
+
+        .year{
+            color: red;
+        }
+
+        .textContent{
+            display: flex;  
+        }
+
+        .thongtu_boder_children{
+            width: 70%;
+            border-right: 1px solid gray;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        #footer{
+            color: white;
+            font-size: 10px;
+            display: flex; 
+            background-color: red; 
+            width: 100%; 
+            height: 120px;
+        }
+
+        #footer > div{
+            padding: 20px;
+        }
+
+        .text_TimKiemVanBan{
+            margin: 10px;
+        }
+
+        
+
+        
+          
+          .text_TimKiemVanBan span {
+            width: 150px;
+           
+          }
+
+          .text_TimKiemVanBan {
+            display: flex;
+            align-items: center;
+          }
+          
+          .text_TimKiemVanBan input,
+          .text_TimKiemVanBan select {
+            flex: 1;
+          }
+          
+
+
+        address{
+            font-style: normal;
+            font-size: 15px;
+        }
+
+        #anh_hover:hover{
+            /* transform: rotate(90deg); */
+            transform: rotate(180deg);
+        }
+
+        /*Le Nhat Thong - 22003295*/
+

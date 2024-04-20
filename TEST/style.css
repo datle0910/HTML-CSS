@@ -1,0 +1,191 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+.wrapper{
+    height: 900px;
+    width: 960px;
+    border:  1px solid black;
+}
+header{
+    height: 125px;
+    width: 100%;
+    background-image: url(images/nen_header.jpg);
+    display: flex;
+}
+.anhheader{
+    height: 100%;
+    width: 70%;
+}
+.anhheader img{
+    float: left;
+}
+.title-header {
+    height: 100%;
+    width: 400px;
+    padding: 20px;
+}
+.title-header p{
+    color: blue;
+}
+.title-header h1{
+    color: red;
+}
+.timkiem{
+    height: 100%;
+    width: 30%;
+}
+#jtf-timkiem{
+    height: 30px;
+    width: 250px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+nav{
+    height: 120px;
+    width: 100%;
+}
+.menu{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(201, 140, 26);
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+
+}
+.menu ul li{
+    padding: 12px;
+}   
+.menu ul li a{
+    text-decoration: none;
+    color: white;   
+    font-size: 20px;
+}
+.duonglink{
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+}
+main{
+    height: 550px;
+    width: 100%;
+    display: flex;
+}
+section{
+    height: 100%;
+    width: 60%;
+}
+.timkiemvanban {
+    height: 45%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    border-bottom: 6px solid orange;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    flex: auto;
+}
+.form-group input{
+    height: 25px;
+    width: 400px;
+}
+.input-group input{
+    height: 25px;
+    width: 197px;
+
+}
+#submit{
+    height: 25px;
+    width: 100px;
+    background-color: red;
+    margin-left: 171px;
+}
+.thongtu{
+    height: 55%;
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+.thongtu67{
+    height: 30px;
+    width: 100%;
+    background-color: blanchedalmond;
+    border: 1px solid rgb(46, 6, 6);
+} 
+.thongtu67 img{
+     float: left;
+}
+.thongtu67 p{
+    font-size: 20px;
+}
+.nd67{
+    height: 120px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+}
+.thongtinnd{
+    height: 120px;
+    width: 68%;
+    border-right:1px solid black ;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.ngaybanhanh{
+    height: 100px;
+    width: 32%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+aside{
+    height: 100%;
+    width: 40%;
+    border-top:6px solid orange ;
+    border-left:1px solid orange ;
+    border-right:1px solid orange ;
+}
+.thongtu68 img{
+    float: left;
+}
+.thongtu68{
+    font-size: 20px;
+    background-color: orange;
+    border: 1px solid brown;
+}
+.nd68{
+    display: flex;
+}
+.thongtinnd2{
+    height: 100%;
+    width: 68%;
+    border-right: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.ngaybanhanh2{
+    height: 100%;
+    width: 32%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.ngayhethan{
+    height: 75px;
+    width: 300px;
+    padding: 10px;
+    border-bottom: 1px solid orange;
+    border-top: 1px solid orange;
+}
+.ngayhethan1 h3{
+    padding: 10px;
+}
+.anh-as{
+    padding: 1px;
+    padding-left: 25px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 2</title>
+</head>
+<body>
+    <h1>Product 2</h1>
+    <p>Price: $150</p>
+    <button onclick="addToCart('Product 2', 150)">Add to Cart</button>
+
+    <script>
+        function addToCart(productName, productPrice) {
+            var quantity = 1;
+
+            // Lấy dữ liệu giỏ hàng từ Local Storage (nếu có)
+            var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Thêm sản phẩm mới vào giỏ hàng
+            cart.push({productName: productName, productPrice: productPrice, quantity: quantity});
+
+            // Lưu lại giỏ hàng vào Local Storage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Chuyển hướng đến trang giohang.html
+            window.location.href = "giohang.html";
+        }
+    </script>
+</body>
+</html>

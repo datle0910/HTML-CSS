@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Register Form</h1>
+        <form id="registerForm" action="thongtin.html" method="POST">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><label for="hovanten">Ho Va Ten(*)</label></td>
+                        <td class="rangbuocdk">
+                            <input type="text" id="hovaten" name="fullname" required>
+                            <span id="rangbuocht" style="color: red;"></span>
+                        </td>
+                    </tr>
+                    <!-- Các trường thông tin khác -->
+                    <!-- ... -->
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit">Dang ky</button>
+                            <button type="button" id="huy">Huy</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#registerForm").submit(function(event) {
+                // Ngăn chặn hành động mặc định của form
+                event.preventDefault();
+
+                // Lấy giá trị từ các input
+                var fullName = $("#hovaten").val();
+                // Lấy các giá trị khác tương tự
+
+                // Lưu thông tin vào local storage để truy cập ở trang thongtin.html
+                localStorage.setItem("fullname", fullName);
+                // Lưu các thông tin khác tương tự
+
+                // Chuyển hướng người dùng đến trang thongtin.html
+                window.location.href = "thongtin.html";
+            });
+
+            // Xử lý sự kiện khi nhấn nút Hủy
+            $("#huy").click(function() {
+                // Đưa người dùng về trang trước đó
+                window.history.back();
+            });
+        });
+    </script>
+</body>
+</html>

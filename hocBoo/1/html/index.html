@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <form action="">
+            <div class="frm-email">
+                <label class="form-label" for="emai">Email</label>
+                <input class="form-control" type="email" id="jtf-email">
+            </div>
+            <div class="frm-password">
+                <label class="form-label" for="password">Password</label>
+                <input class="form-control" type="password" id="jtf-password">
+            </div>
+            <div>
+                <label for="select">Chuyen Nganh</label>
+                <select class="form-control" id="jcb-chuyennganh">
+                    <option value="ktpm">KTPH</option>
+                    <option value="khmt">KHMT</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" id="xacnhan-ccc" class="btn btn-outline-primary" value="Xac Nhan">
+                <input type="button" id="duasangtrangkhac" class="btn btn-outline-primary" value="Chim Cut">
+            </div>
+            
+        </form>
+        
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#duasangtrangkhac").click(function(event){
+                var email = $("#jtf-email").val();
+                var pass = $("#jtf-password").val();
+                var cn = $("#jcb-chuyennganh").val();
+
+                localStorage.setItem("email",email);
+                localStorage.setItem("pass",pass);
+                localStorage.setItem("cn",cn);
+
+                window.location.href = "CutToiDay.html"; // Điều hướng sang trang CutToiDay.html
+            });
+        });
+    </script>
+</body>
+</html>

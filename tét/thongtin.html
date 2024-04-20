@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin</title>
+</head>
+<body>
+    <h1>Thông Tin</h1>
+    <div id="info"></div>
+
+    <script>
+        // Lấy thông tin từ local storage
+        var fullName = localStorage.getItem("fullname");
+        // Lấy các thông tin khác tương tự
+
+        // Hiển thị thông tin
+        document.getElementById("info").innerHTML = "<p>Họ và tên: " + fullName + "</p>";
+        // Hiển thị các thông tin khác tương tự
+    </script>
+</body>
+</html>

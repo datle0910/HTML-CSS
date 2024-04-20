@@ -1,0 +1,14 @@
+th {
+    background-color: #f2f2f2;
+    text-align: center; /* Canh giữa nội dung của các thẻ th */
+}
+#img-main{
+    height:190px;
+    width: 100%;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

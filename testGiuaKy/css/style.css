@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+.wrapper{
+    height: 750px;
+    width: 960px;
+    border: 1px solid black;
+}
+nav{
+    height: 100px;
+    width: 100%;
+    background-color: #FAF3EA;
+    display: flex;
+}
+.menu{
+    display: flex;
+}
+.menu li {
+    list-style: none;
+    padding: 25px;
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+img{
+    padding-top: 15px;
+}
+main{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.explore{
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 50%;
+    padding: 14px;
+    box-sizing: border-box;
+    left: 400px;
+    bottom: 250px;
+}
+.explore p{
+    text-decoration: solid;
+}
+section{
+    height: 500px;
+    width: 50%;
+    background-color: #FAF3EA;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.img-sec{
+    height: 50%;
+    width: 100%;
+    padding-top: 20px;
+}
+.title-sec{
+    height: 50%;
+    width: 100%;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+.title-sec h1{
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+aside{
+    height: 500px;
+    width: 50%;
+    background-color: #FAF3EA;
+    padding-top: 45px;
+    box-sizing: border-box;
+    position: relative;
+}
+#link-icon{
+    position: absolute;
+    bottom:160px;
+    left: 450px;
+}
+.tilte-as{
+    height: 30%;
+    width: 100%;
+}
+.main-paragrap{
+    height: 100%;
+    width: 60%;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+footer{
+    height: 150px;
+    width: 100%;
+    background-color: #FAF3EA;
+    position: relative;
+    display: flex;
+}
+.foo-title{
+    height: 100%;
+    width: 200px;
+    padding: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#jscroll{
+    position: absolute;
+    left: 930px;
+    bottom:60px
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Stt</th>
+                        <th>Hình ảnh</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img height="150px" src="../img/hoa1jpg.jpg" alt=""></td>
+                        <td class="gia">20000</td>
+                        <td><input type="number" class="soluong" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img height="150px" src="../img/hoa2.jpg" alt=""></td>
+                        <td class="gia">40000</td>
+                        <td><input type="number" class="soluong" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img height="150px" src="../img/hoa3.jpg" alt=""></td>
+                        <td class="gia">30000</td>
+                        <td><input type="number" class="soluong" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><img height="150px" src="../img/hoa4.jpg" alt=""></td>
+                        <td class="gia">50000</td>
+                        <td><input type="number" class="soluong" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><img height="150px" src="../img/hoa5.jpg" alt=""></td>
+                        <td class="gia">30000</td>
+                        <td><input type="number" class="soluong" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Tổng Thành Tiền</td>
+                        <td id="tongsotien">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".soluong").on('input', function() {
+                var tongtien = 0;
+                $(".soluong").each(function(index) {
+                    var soluong = parseInt($(this).val());
+                    var gia = parseInt($(".gia").eq(index).text());
+                    tongtien += soluong * gia;
+                });
+                $("#tongsotien").text(tongtien);
+            });
+        });
+    </script>
+</body>
+</html>

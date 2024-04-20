@@ -1,0 +1,18 @@
+.container{
+    height: 600px;
+    width: 1500px;
+}
+.box{    
+    margin: 20px; 
+}
+.box h2{
+    display: flex;
+    justify-content: center;
+}
+.col{
+    border: 1px solid black;
+    margin: 20px;
+}
+.row{
+    margin: 20px;
+}
